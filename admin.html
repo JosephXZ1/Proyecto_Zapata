@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Admin</title>
+
+    <link rel="stylesheet" href="CSS/admin.css">
+    <link rel="stylesheet" href="CSS/global.css">
+
+    <link rel="icon" href="Multimedia/Imagenes/icono.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="izq">
+            <div class="icon">
+                <img src="Multimedia/Imagenes/Admin/profile.png" alt="">
+            </div>
+            <p>El Admin Carlos</p>
+
+            <!--
+            <a href="" class="boton">
+                <img src="Multimedia/Imagenes/Clientes/reservation.png" alt="">
+                <p>Reservaciones</p>
+            </a>
+            <a href="" class="boton">
+                <img src="Multimedia/Imagenes/Clientes/delivery.png" alt="">
+                <p>Pedidos</p>
+            </a>-->
+        </section>
+        <secton class="der">
+            <h3>Generar reportes</h3>
+            <div class="select">
+                <label for="start" onclick="document.getElementById('start').showPicker()">Inicio</label>
+                <input type="datetime-local" name="start" id="start" required>
+            </div>
+            <div class="select">
+                <label for="end" onclick="document.getElementById('end').showPicker()">Finalización</label>
+                <input type="datetime-local" name="end" id="end" required>
+            </div>
+            <div class="select">
+                <label for="concept" onclick="document.getElementById('concept').showPicker()">Concepto</label>
+                <select name="concept" id="concept">
+                    <option value="Ventas">Ventas</option>
+                    <option value="Reservaciones">Reservaciones</option>
+                    <option value="Pedidos_pendietes">Pedidos pendientes</option>
+                    <option value="Pedidos_cancelados">Pedidos cancelados</option>
+                </select>
+            </div>
+
+            <button type="submit">Generar reporte</button>
+        </secton>
+    </main>
+</body>
+</html>
